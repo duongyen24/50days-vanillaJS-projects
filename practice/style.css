@@ -15,52 +15,52 @@ body {
   overflow: hidden;
   margin: 0;
 }
-.container{
+
+.container {
   display: flex;
-  width: 90vh;;
+  /* tran vien ra ngoai bao nhieu */
+  width: 85vw; 
 }
 
-.panel{
-  background-position: center;
+.panel {
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 85vh;
+  height: 80vh;
   border-radius: 50px;
 
-  margin: 10px;
-  flex:0.5;
   cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
   position: relative;
   -webkit-transition: all 700ms ease-in;
-
-
 }
 
-.panel h3{
-  font-size: 15px;
-  color: antiquewhite;
+.panel h3 {
+  color: #fff;
+  font-size: 24px;
   position: absolute;
   bottom: 20px;
-  left: 10px;
+  left: 20px;
   margin: 0;
   opacity: 0;
-  
 }
 
-.panel active{
+.panel.active {
   flex: 5;
 }
 
-.panel.active h3{
+.panel.active h3 {
   opacity: 1;
-  transition: all 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) {
   .container {
     width: 100vw;
   }
-  .panel:nth-of-type(2) {
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
     display: none;
   }
 }
